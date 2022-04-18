@@ -1,3 +1,8 @@
+/* 작성자 : 전민영
+ * 목적 : ListWidget에 있는 item 클래스
+ * 업데이트 날짜 : 22.04.18
+ */
+
 #ifndef MODELLISTWIDGETITEM_H
 #define MODELLISTWIDGETITEM_H
 
@@ -20,8 +25,8 @@ public:
     void SetName(const QString& paramName){name = paramName;}
     QString GetName() const {return name;}
 private:
-    int index;
-    QString name;
+    int index;      // 모델의 index
+    QString name;   // 모델의 이름.
 };
 
 #endif // MODELLISTWIDGETITEM_H

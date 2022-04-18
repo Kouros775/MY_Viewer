@@ -1,3 +1,8 @@
+/* 작성자 : 전민영
+ * 목적 : 메인 윈도우 클래스.
+ * 업데이트 날짜 : 22.04.18
+ */
+
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 

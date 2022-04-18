@@ -20,10 +20,13 @@ CommandAddTorus::~CommandAddTorus()
 
 }
 
+
+// 1. 모델에 index와 이름 set
+// 2. 렌더러에 signal 던지기.
 void CommandAddTorus::Execute()
 {
     int addIndex = Document::Instance().GetAddIndex();
-    QString itemText = QString::number(addIndex) + " : " + "Torus";
+    QString itemText = "Torus";
 
     ModelListWidgetItem* item = new ModelListWidgetItem(QIcon(IMAGE_PATH_MODEL_WIDGET_ITEM), itemText);
     item->SetIndex(addIndex);

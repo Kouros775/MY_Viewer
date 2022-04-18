@@ -18,6 +18,8 @@ RenderCamera::~RenderCamera()
     qDebug() <<__FUNCTION__;
 }
 
+
+// scene의 camera를 set.
 void RenderCamera::Initialize(Qt3DRender::QCamera* paramCamera, Qt3DCore::QEntity* paramRootEntity)
 {
     if(nullptr != paramCamera && nullptr != paramRootEntity)

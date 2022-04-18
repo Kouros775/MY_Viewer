@@ -20,6 +20,8 @@ void CommandSelectListWidgetItem::Execute()
 
 }
 
+
+// 선택한 위젯 변경.
 void CommandSelectListWidgetItem::ItemPressed(QListWidgetItem *item)
 {
     ModelListWidgetItem* modelItem = dynamic_cast<ModelListWidgetItem*>(item);

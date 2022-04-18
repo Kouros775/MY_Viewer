@@ -1,3 +1,8 @@
+/* 작성자 : 전민영
+ * 목적 : model index를 관리하기 위한 Document
+ * 업데이트 날짜 : 22.04.18
+ */
+
 #ifndef DOCUMENT_H
 #define DOCUMENT_H
 
@@ -26,8 +31,8 @@ private:
     ~Document();
 
 private:
-    int     addIndex;
-    int     selectedIndex;
+    int     addIndex; // 추가할 model의 index
+    int     selectedIndex; // 선택한 model index
 };
 
 #endif // DOCUMENT_H

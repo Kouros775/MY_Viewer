@@ -44,9 +44,9 @@ MainWindow::MainWindow(QWidget *parent)
     addCommands();
     addToolBarActions();
 
-    RenderWindow* renderWindow = renderWidget->GetRenderWindow();
+    //RenderWindow* renderWindow = renderWidget->GetRenderWindow();
     connect(listWidget, &QListWidget::itemPressed, commandSelectWidgetItem, &CommandSelectListWidgetItem::ItemPressed);
-    connect(commandSelectWidgetItem, &CommandSelectListWidgetItem::SelectModel, renderWindow, &RenderWindow::SelectModel);
+    //connect(commandSelectWidgetItem, &CommandSelectListWidgetItem::SelectModel, renderWindow, &RenderWindow::SelectModel);
 }
 
 
@@ -54,7 +54,7 @@ MainWindow::~MainWindow()
 {
 }
 
-
+// 메뉴의 action을 추가.
 void MainWindow::addToolBarActions()
 {
     RenderWindow* renderWindow = renderWidget->GetRenderWindow();
@@ -120,6 +120,8 @@ void MainWindow::addToolBarActions()
     fileToolBar->addAction(editModelColor);
 }
 
+
+// 모델리스트 위젯 추가.
 void MainWindow::addListWidget()
 {
     QDockWidget* dock = new QDockWidget(tr("Model List"), this);
@@ -140,6 +142,7 @@ void MainWindow::addRenderWidget()
 }
 
 
+// 버튼 커맨드 추가
 void MainWindow::addCommands()
 {
     commandSelectWidgetItem = new CommandSelectListWidgetItem(this);
@@ -156,6 +159,7 @@ void MainWindow::addCommands()
 }
 
 
+// 선택한 index를 가진 위젯아이템 current로 설정.
 void MainWindow::slotSelctListWidget(const int &paramIndex)
 {
     for (int row = 0; row < listWidget->count(); row++)
@@ -166,6 +170,8 @@ void MainWindow::slotSelctListWidget(const int &paramIndex)
     }
 }
 
+
+// 모든 위젯아이템 삭제
 void MainWindow::slotRemoveAllWidget()
 {
     for (int row = 0; row < listWidget->count(); row++)

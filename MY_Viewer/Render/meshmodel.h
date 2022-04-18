@@ -1,3 +1,8 @@
+/* 작성자 : 전민영
+ * 목적 : Entity를 상속받아 renderer할 model의 데이터 클래스.
+ * 업데이트 날짜 : 22.04.18
+ */
+
 #ifndef MESHMODEL_H
 #define MESHMODEL_H
 
@@ -34,8 +39,8 @@ public:
     Qt3DRender::QMaterial* GetMaterial() const;
     Qt3DRender::QGeometryRenderer* GetGeometryRenderer() const;
 private:
-    int index;
-    QColor color;
+    int index; // 모델의 index
+    QColor color; // 모델의 color
 };
 
 #endif // MESHMODEL_H

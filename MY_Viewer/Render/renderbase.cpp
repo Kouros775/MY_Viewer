@@ -18,6 +18,7 @@ RenderBase::~RenderBase()
     qDebug() <<__FUNCTION__;
 }
 
+// rootEntity를 생성 및 반환
 Qt3DCore::QEntity* RenderBase::Initialize()
 {
     rootEntity = new Qt3DCore::QEntity();
@@ -64,13 +65,18 @@ bool RenderBase::RemoveModel(const int &paramIndex)
 
 bool RenderBase::RemoveAllModel()
 {
+    bool bRes = false;
+
     QMap<int, MeshModel*>::iterator iter = modelMap.begin();
 
-    for(iter ; iter != modelMap.end() ; iter++)
+    for(; iter != modelMap.end() ; iter++)
     {
         iter.value()->~MeshModel();
         modelMap.erase(iter);
+        bRes = true;
     }
+
+    return bRes;
 }
 
 

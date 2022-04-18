@@ -1,3 +1,9 @@
+/* 작성자 : 전민영
+ * 목적 : Qt3DRender를 이용한 카메라 클래스.
+ * TODO : 3인칭카메라 구현.
+ * 업데이트 날짜 : 22.04.18
+ */
+
 #ifndef RENDERCAMERA_H
 #define RENDERCAMERA_H
 
