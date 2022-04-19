@@ -272,10 +272,19 @@ bool Renderer::Rotate(const MeshModel *paramModel, const QVector3D &startPos, co
     {
         Qt3DCore::QTransform* transform = paramModel->GetTransform();
 
-        QVector3D rotateAxis = QVector3D::crossProduct(startPos, endPos);
+        QVector3D camPos = camera->GetPos();
+        QVector3D axis2 = camPos - startPos;
+        axis2.normalize();
+        QVector3D axis1 = endPos - startPos;
+        axis1.normalize();
+
+
+        QVector3D rotateAxis = QVector3D::crossProduct(axis2, axis1);
         rotateAxis.normalize();
 
-        float rotateDegree = 5.0f;
+        float degree = (endPos-startPos).length();
+
+        float rotateDegree = degree * 3.0f;
         QMatrix4x4 matrix;
         matrix.rotate(rotateDegree, rotateAxis);
 
