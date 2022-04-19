@@ -25,3 +25,6 @@
       3. 프로젝트 구현             
       
  # 실제 프로그램 실행 화면
+![캡처](https://user-images.githubusercontent.com/100816756/163898683-88b98a47-58d5-461b-b427-e8d6f80ac6ba.PNG)
+
+
